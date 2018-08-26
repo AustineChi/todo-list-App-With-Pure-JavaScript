@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Todo List App</title>
+      <!-- Add icon library -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+      <header> 
+         <h1>Todo App</h1>
+         <input type="text" placeholder="Enter an activity..."  id="item">
+         <button type="submit" id="add"><i class="fa fa-plus"></i>
+         </button>
+      </header>
+      <div class="container">
+         <!--uncompleted task -->
+         <h3 class="task-header">New Tasks</h3>
+         <ul id="todo"></ul>
+         <div class="divider"></div>
+         <!-- completed task -->
+         <h3 class="completed-header">Completed Tasks</h3>
+         <ul id="completed"></ul>
+      </div>
+      <!--main javascript file below-->
+      <script src="index.js"></script>
+   </body>
+</html>

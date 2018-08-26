@@ -1,0 +1,123 @@
+$full-size: 100%;
+$color-primary: #f9ed69;//yellow color
+$color-secondary: #f08a5d;//orange color
+$color-tertiary: #32373b;
+$text-color-gray: #333;
+$text-color-light: #eee;
+$backgorund-color-light: #edf0f1;
+$color-blue: #4285f4;
+$color-white: #fff;
+$color-green: rgb(10,238,10);
+$color-red: rgb(241,44,9);
+* {
+    margin: 0;
+    padding: 0;
+    font-family: arial,sans-serif;
+}
+body {
+    background-color: $backgorund-color-light;
+}
+header {
+    width: $full-size;
+    height: 170px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: $color-primary;
+    color: $text-color-light;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 0 2px 4px rgba($color-tertiary,0.2);
+    h1 {
+        text-align: center;
+        color: $text-color-gray;
+        margin: 20px;
+    }
+    input {
+        width: 70%;
+        height: 50px;
+        margin: 12px 10%;
+        padding: 6px;
+        float: left;
+        font-weight: 700;
+        font-size: 18px;
+        background: darken($text-color-light,7%);
+        border-top-right-radius: 45px;
+        border-bottom-right-radius: 45px;
+        border: 0;
+        outline: none;
+    }
+    button {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 90.5px;
+        right: 19%;
+        z-index: 2;
+        border-radius: 30px;
+        border: 0;
+        box-shadow: 0;
+        background: $color-secondary;
+        outline: 0;
+        cursor: pointer;
+        .fa {
+            font-size: 30px;
+        }
+    }
+}
+.container {
+    width: 70%;
+    margin: 140px 10%;
+    .task-header {
+        display: none;
+        margin: 200px 0 20px 0;
+    }
+   .completed-header {
+        display: none;
+        margin: 40px 0 20px 0;
+    }
+    li {
+        list-style-type: none;
+        height: 50px;
+        padding: 10px;
+        background-color: $color-white;
+        font-size: 16px;
+        font-weight: 700;
+        width: $full-size;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
+        border-radius: 100px;
+        position: relative;
+        margin-bottom: 20px;
+        div {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 98%;
+            .fa {
+                float: right;
+                margin-right: 10px;
+                font-size: 23px;
+                color: $text-color-light;
+            }
+            .fa-trash:hover {
+                color: $color-red;
+            }
+            .fa-check-square:hover {
+                color: $color-green;
+            }
+        }
+    }
+    ul#completed {
+        margin-top: 10px;
+        .fa-check-square {
+            color: $color-green;
+        }
+    }
+}
+.divider {
+    width: 100%;
+    background-color: $text-color-gray;
+    height: 3px;
+    margin: 50px;
+}
